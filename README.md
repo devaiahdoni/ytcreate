@@ -16,7 +16,7 @@ graph TD
     API -->|Enqueue Job| Celery[Celery Worker Process]
     Celery -->|Execute State Machine| Orch[Orchestrator Agent]
     
-    subgraph Multi-Agent Graph (LangGraph)
+    subgraph "Multi-Agent Graph (LangGraph)"
         Orch --> Script[Script Writer Agent]
         Script --> Split[Scene Splitter Agent]
         Split --> Prompt[Prompt Engineer Agent]
